@@ -1396,17 +1396,17 @@ void TissueBacteria:: Reverse_IndividualBacteriaa (int i)
     if (bacteria[i].attachedToFungi == false || inLiquid == true)
     {
         
-        //double random_number = unif_distribution(reversal_rng);
-        //bacteria[i].turnAngle = (std::log((random_number-1.0017) / (-1.0017)))/ (-18.11);
+        double random_number = unif_distribution(reversal_rng);
+        bacteria[i].turnAngle = (std::log((random_number-1.0017) / (-1.0017)))/ (-18.11);
         
-        
+        /*
         //Reselects to Limit distribution
         double random_number;
         do {
             random_number = unif_distribution(reversal_rng);
             bacteria[i].turnAngle = (std::log((random_number-1.0017) / (-1.0017)))/ (-18.11);
         } while (bacteria[i].turnAngle > bacteria[i].maxTurnAngle);
-        
+        */
         
         // Calculate a Random value which is either +1 or -1
         int Random_Multiplier = unif_int_distribution(multiplier_rng);
